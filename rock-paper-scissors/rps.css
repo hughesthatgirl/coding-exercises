@@ -1,0 +1,72 @@
+body {box-sizing: border-box; padding: 60px; text-align: center; font-family: sans-serif;}
+
+button {padding: 10px;}
+
+.todo-header {
+    text-align: left;
+    border: 5px solid black;
+    padding: 20px;
+    margin-bottom: 80px;
+}
+
+.game-wrapper {
+	display: flex;
+}
+
+.game-board {
+	flex-basis: 50%;
+	padding: 0 20px;
+}
+
+.game-board > * + * {
+	margin-top: 20px;
+}
+
+.round {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.round-num {
+    color: blue;
+    font-size: 24px;
+}
+
+.input-label {
+	display: block;
+}
+
+.input-button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.answers {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.answers-list {
+    padding-left: 20px;
+}
+
+.answers-list li + li {
+    margin-top: 10px;
+}
+
+.winner-instructions {
+	margin-top: 40px;
+}
+
+.winner-result {
+	font-size: 50px;
+	color: green;
+}

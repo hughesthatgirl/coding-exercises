@@ -1,0 +1,5 @@
+@media screen and (min-width: 1024px){
+    .container {
+        border: 5px solid orangered;
+    }
+}

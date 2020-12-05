@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p><label for="userOneDropdown">Choose Your Fighter User 1</label></p>
+        <select name="userOne" id="userOneDropdown">
+            <option>User 1 Option</option>
+            <option value="Rock">Rock</option>
+            <option value="Paper">Paper</option>
+            <option value="Scissors">Scissors</option>
+          </select>
+        
+          <p><label for="userTwoDropdown">Choose Your Fighter User 2</label></p>
+          <select name="userTwo" id="userTwoDropdown">
+            <option>User 2 Option</option>
+            <option value="Rock">Rock</option>
+            <option value="Paper">Paper</option>
+            <option value="Scissors">Scissors</option>
+          </select>
+
+          <button id="submit" type="button">Submit</button>
+
+          <script>
+              //TODO:
+
+              //Set up for loop
+              //Store scores in a variable
+                var compare = function(){
+                    var userOneInput = document.getElementById('userOneDropdown').value;
+                    var userTwoInput = document.getElementById('userTwoDropdown').value;
+
+                    if (userOneInput === userTwoInput){
+                        alert('You Tied!');
+                    }
+
+                    if (userOneInput === 'Rock' && userTwoInput === 'Scissors'){
+                        alert('User 1 Wins');
+                    } else if (userTwoInput === 'Rock' && userOneInput === 'Scissors') {
+                        alert('User 2 Wins');
+                    }
+
+                    if (userOneInput === 'Paper' && userTwoInput === 'Rock'){
+                        alert('User 1 Wins');
+                    } else if (userTwoInput === 'Paper' && userOneInput === 'Rock') {
+                        alert('User 2 Wins');
+                    }
+
+                    if (userOneInput === 'Scissors' && userTwoInput === 'Paper'){
+                        alert('User 1 Wins');
+                    } else if (userTwoInput === 'Scissors' && userOneInput === 'Paper') {
+                        alert('User 2 Wins');
+                    }
+                }
+
+                document.getElementById('submit').onclick = compare;
+          </script>
+    </body>
+</html>

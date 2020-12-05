@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rock Paper Scissors Game</title>
+        <link rel="stylesheet" href="rps.css">
+    </head>
+    <body>
+        <header class="todo-header">
+            <ul>
+                <li><strong>TO DO:</strong></li>
+                <li>Disable 'submit choice' buttons and add 'You're Done' message after counter gets to 10</li>
+                <li>Disable 'And the winner is' button on page load; Enable once each player has submitted 10 answers</li>
+                <li>Change text inputs to radio buttons</li>
+                <li>Add button to reset/restart the game</li>
+                <li>Be able to submit answer on enter</li>
+            </ul>
+        </header>
+        <h1>Rock, Paper, Scissors, SHOOT!</h1>
+        <p class="instructions">Instructions will go here. How to play the game/ use the app.</p>
+        <div class="game-wrapper">
+            <p id="gameOver"></p>
+            <div class="game-board">
+                <h2>Player 1</h2>
+                <p class="round">This is round <span id="numOfRound1" class="round-num"></span> /10</p>
+                <label class="input-label" for="playerOneInput">Type "rock", "paper", or "scissors" in the field below<br> Click the 'submit choice' button to submit your choice</label>
+                <input class="input" id="playerOneInput" type="text" name="input1" value="">
+                <p id="errorMsg1" class="error"></p>
+                <button class="input-button" id="playerOneBtn" type="button">Submit Choice</button>
+                <div class="answers">
+                    <p>Your Answers</p>
+                    <ol id="answers1" class="answers-list"></ol>
+                </div>
+            </div>
+            <div class="game-board">
+                <h2>Player 2</h2>
+                <p class="round">This is round <span id="numOfRound2" class="round-num"></span> /10</p>
+                <label class="input-label" for="playerTwoInput">Type "rock", "paper", or "scissors" in the field below. <br> Click the 'submit choice' button to submit your choice.</label>
+                <input class="input" id="playerTwoInput" type="text" name="input2" value="">
+                <p id="errorMsg2" class="error"></p>
+                <button class="input-button" id="playerTwoBtn" type="button">Submit Choice</button>
+                <div class="answers">
+                    <p>Your Answers</p>
+                    <ol id="answers2" class="answers-list"></ol>
+                </div>
+            </div>
+        </div>
+        
+        <p class="winner-instructions">Click on the button below to see who won!</p>
+        <button id="winner" type="button">And the Winner is...</button>
+        <p id="winnerResult" class="winner-result"></p>
+
+        <script src="rps.js"></script>
+    </body>
+</html>

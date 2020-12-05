@@ -1,1 +1,3 @@
-Repo for code written while following Zell Liew's Learn JavaScript course. 
+# Coding Exercises
+
+This repo contains a variety of coding exercises and assignments.
