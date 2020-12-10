@@ -13,3 +13,5 @@ function toggleDisplay(event) {
     keyEventsEl.classList.add("hide");
   }
 }
+
+eventType.addEventListener('change', toggleDisplay);
