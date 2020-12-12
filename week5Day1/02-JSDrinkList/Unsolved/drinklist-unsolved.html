@@ -27,31 +27,13 @@
       "Ice Tea: $4"
     ];
 
-    // 1. Create code that "grabs" the div with the matching id (#drink-options);
-    // ...
     var drinkOptions = document.querySelector('#drink-options');
-
-    // ...
-
-
-    // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
-    // HINT: You will need to use each of the following methods: createElement, textContent, appendChild
-    // ...
-
-    // for (let i = 0; i < drinkList.length; i++){
-    //   var p = document.createElement('p');
-    //   p.textContent = drinkList[i];
-    //   drinkOptions.appendChild(p);
-    // }
 
     drinkList.forEach(function(drink){
       var p = document.createElement('p');
       p.textContent = drink;
       drinkOptions.appendChild(p);
     })
-
-
-    // ...
 
   </script>
 
