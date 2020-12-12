@@ -13,7 +13,8 @@ var secondsElapsed = 0;
 var interval;
 
 function startTimer() {
-  // Write code to start the timer here
+	
+	
 }
 
 playButton.addEventListener("click", startTimer);
