@@ -10,13 +10,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     // Example queryURL for Giphy API
+    var q = 'cats';
+    var limit = 1;
+    var rating = 'g';
+    var lang = 'en';
+
+    var searchURL = `https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=${q}&limit=${limit}&rating=${rating}&lang=${lang}`
     var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
 
     $.ajax({
-      url: queryURL,
+      url: searchURL,
       method: "GET"
     }).then(function(response) {
-      console.log(response);
+      
     });
   </script>
 

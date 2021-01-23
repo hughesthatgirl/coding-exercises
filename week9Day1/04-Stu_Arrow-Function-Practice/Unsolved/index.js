@@ -25,9 +25,11 @@ var map = (arr, cb) => {
 
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-var doubled = map(numbers, (element) => {
-  return element * 2;
-});
+// var doubled = map(numbers, (element) => {
+//   return element * 2;
+// });
+
+var doubled = map(numbers, element => element * 2);
 
 // Prints `[ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]`
 console.log(doubled);
@@ -63,13 +65,13 @@ var netflixQueue = {
     "Eternal Sunshine of the Spotless Mind",
     "Fight Club"
   ],
-  watchMovie: () => {
+  watchMovie: function() {
     this.queue.pop();
   },
-  addMovie: (movie) => {
+  addMovie: function(movie) {
     this.queue.unshift(movie);
   },
-  printQueue: () => {
+  printQueue: function() {
     var list = "";
     for (var i = this.queue.length - 1; i >= 0; i--) {
       var currentMovie = this.queue[i];
