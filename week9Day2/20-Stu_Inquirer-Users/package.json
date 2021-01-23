@@ -1,7 +1,7 @@
 {
-  "name": "Unsolved",
+  "name": "20-Stu_Inquirer-Users",
   "version": "1.0.0",
-  "description": "* As a developer, I want to be able to keep track of dependencies using `npm`.",
+  "description": "Work with a partner to implement the following user story:",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,5 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^7.3.3"
-  },
-  "devDependencies": {}
+  }
 }
