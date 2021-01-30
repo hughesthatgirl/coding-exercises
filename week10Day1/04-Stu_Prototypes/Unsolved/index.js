@@ -1,4 +1,5 @@
 // TODO: Add a comment describing what kind of function this is
+// Constructor Function
 function Character(name, type, age, strength, hitpoints) {
   this.name = name;
   this.type = type;
@@ -8,6 +9,7 @@ function Character(name, type, age, strength, hitpoints) {
 }
 
 // TODO: Add a comment describing the purpose of `.prototype` in this method declaration
+//Everything built off of Character has access to this method
 Character.prototype.printStats = function () {
   console.log(
     `Name: ${this.name}\nProfession: ${this.type}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
@@ -16,6 +18,8 @@ Character.prototype.printStats = function () {
 };
 
 // TODO: Add a comment describing the functionality of this method
+// If hitpoints greater than 0 console.log name is still alive and return true
+// Else console to log name has died and return false
 Character.prototype.isAlive = function () {
   if (this.hitpoints > 0) {
     console.log(`${this.name} is still alive!`);
@@ -27,6 +31,7 @@ Character.prototype.isAlive = function () {
 };
 
 // TODO: Add a comment describing the functionality of this method
+// 
 Character.prototype.attack = function (character2) {
   character2.hitpoints -= this.strength;
 };

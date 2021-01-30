@@ -17,12 +17,14 @@ function Student(first, last, age) {
     // Ex. 95 => 'A'
     if (typeof input === 'number') {
       // TODO: Add logic here to return a single letter grade
+      response = 'A';
       return response;
     }
     // Return a range if a letter grade was passed
     // Ex. 'A' => '90 - 100'
     if (typeof input === 'string') {
       // TODO: Add logic here to return range as a string
+      response = ;
       return response;
     }
   };
