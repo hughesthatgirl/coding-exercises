@@ -11,3 +11,5 @@
   * Then, once you've gotten the original code to display in the browser, create a new `Obi Wan Kenobi route` to display Kenobi's information. Use the comments and the previous code in the file as a guide.
 
   * Help those around you when done.
+
+  * test bash
