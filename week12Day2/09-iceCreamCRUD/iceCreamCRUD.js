@@ -40,7 +40,9 @@ const deleteProduct = () => {
   );
 };
 
+//We are changing the product in a row
 const updateProduct = () => {
+  //UPDATE products SET quantity=100 WHERE flavor=Rocky Road
   console.log('Updating all Rocky Road quantities...\n');
   const query = connection.query(
     'UPDATE products SET ? WHERE ?',
