@@ -10,12 +10,17 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Be sure to update with your own MySQL password!
-  password: '',
+  //In order for the connection to work, the DB must already exist
+  password: 'jhsqlpass1006!',
   database: 'ice_creamDB',
 });
 
+//Callback function
 connection.connect((err) => {
   if (err) throw err;
   console.log(`connected as id ${connection.threadId}`);
+  //closes the connection
+  //want to do that when you're not actively working with the data
+  //Saves memory
   connection.end();
 });
