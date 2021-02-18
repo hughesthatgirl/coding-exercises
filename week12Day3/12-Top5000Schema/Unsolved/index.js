@@ -20,7 +20,7 @@ const connection = mysql.createConnection({
 // INNER JOIN authors ON books.authorId = authors.id;
 
 const joinTables = () => {
-  connection.query('SELECT year FROM top5000 INNER JOIN topAlbums ON top5000.year = topAlbums.year', (err, res) => {
+  connection.query('SELECT artist FROM top5000 JOIN topAlbums ON top5000.year = topAlbums.year', (err, res) => {
     if (err) throw err;
     // Log all results of the SELECT statement
     console.log(res);
