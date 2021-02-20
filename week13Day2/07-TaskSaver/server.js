@@ -19,7 +19,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
   user: 'root',
-  password: '',
+  password: 'jhsqlpass1006!',
   database: 'task_saver_db',
 });
 
@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
 // Post route -> back to home
 app.post('/', (req, res) => {
   // Test it
-  // console.log(`You sent, ${req.body.task}`);
+  console.log(`You sent, ${req.body.task}`);
 
   // Test it
   // return res.send(`You sent, ${req.body.task}`);
