@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
   port: 3306,
   user: 'root',
   // Be sure to update with your own MySQL password!
-  password: '',
+  password: process.env.DB_PASS,
   database: 'wizard_schools_db',
 });
 
