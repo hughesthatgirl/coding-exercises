@@ -1,1 +1,27 @@
 <!-- 5. Output the animalType string, pet boolean, and fierceness number to the page for all the pets. -->
+<style>
+    div{
+        border: 2px solid black;
+        padding: 10px;
+    }
+    div + div {
+        margin-top: 20px;
+    }
+
+    div p + p {
+        margin-top: 10px;
+    }
+
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<h1>Animals</h1>
+
+{{#each animals }}
+    <div>
+        <p>{{animalType}}</p>
+        <p>{{pet}}</p>
+        <p>{{fierceness}}</p>
+    </div>
+{{/each}} 
