@@ -22,7 +22,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
   user: 'root',
-  password: '',
+  password: 'jhsqlpass1006!',
   database: 'quotes_db',
 });
 
@@ -36,7 +36,7 @@ connection.connect((err) => {
 
 // Serve index.handlebars to the root route.
 app.get('/', (req, res) => {
-
+  res.render('index')
 });
 
 // Show the user the individual quote and the form to update the quote.
