@@ -84,6 +84,18 @@ const orm = {
       cb(result);
     });
   },
+  delete(table, cb){
+    let queryString = `DELETE FROM ${table}`;
+
+    console.log(queryString);
+    connection.query(queryString, (err, result) => {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  }
 };
 
 // Export the orm object for the model (cat.js).

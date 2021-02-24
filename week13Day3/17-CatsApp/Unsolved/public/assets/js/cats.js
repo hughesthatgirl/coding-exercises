@@ -76,4 +76,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     });
   }
+
+  const deleteBtns = document.querySelectorAll('.delete');
+
+  // Set up the event listener for the create button
+  if (deleteBtns) {
+    deleteBtns.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        console.log('test');
+        // Grabs the id of the element that goes by the name, "id"
+        const id = e.target.getAttribute('data-id');
+
+        fetch(`/api/cats/${id}`, {
+          method: 'DELETE',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          }
+        }).then((response) => {
+          // Check that the response is all good
+          // Reload the page so the user can see the new quote
+          if (response.ok) {
+            console.log(`Deleted: ${id}`);
+            location.reload('/');
+          } else {
+            alert('something went wrong!');
+          }
+        });
+      });
+    });
+  }
 });
