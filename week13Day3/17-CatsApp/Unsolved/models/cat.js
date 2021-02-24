@@ -12,8 +12,8 @@ const cat = {
   update(objColVals, condition, cb) {
     orm.update('cats', objColVals, condition, (res) => cb(res));
   },
-  delete(cb){
-    orm.delete('cats', (res) => cb(res));
+  delete(condition, cb){
+    orm.delete('cats', condition, (res) => cb(res));
   }
 };
 
