@@ -49,9 +49,9 @@ router.delete('/api/cats/:id', (req, res) => {
   console.log('condition', condition);
 
   cat.delete(
-    (result) => {
+    condition,(result) => {
       if (result.affectedRows == 0) {
-        return res.status(500).end();
+        return res.status(404).end();
       }
       res.status(200).end();
     }
