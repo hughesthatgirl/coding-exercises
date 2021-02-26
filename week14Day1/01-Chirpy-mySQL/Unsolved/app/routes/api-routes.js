@@ -9,7 +9,15 @@ const connection = require('../config/connection.js');
 // Routes
 // =============================================================
 module.exports = (app) => {
-  // Get all chirps
+  //When I get this type of request to this address here is how to respond
+  app.get('/api/all', function(err, result){
+    const dbQuery = 'SELECT * FROM chirps';
 
-  // Add a chirp
+    connection.query(dbQuery, function(err, result){
+      if (err) throw err;
+      res.json(result);
+    })
+  });
+
+  app.post()
 };
