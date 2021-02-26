@@ -4,7 +4,7 @@
 
 // Dependencies
 // =============================================================
-const orm = require('../config/orm.js');
+const Character = require('../model/character.js');
 
 // Routes
 // =============================================================
@@ -16,7 +16,11 @@ module.exports = (app) => {
       // Then display the JSON for ONLY that character.
 
       // (Note how we're using the ORM here to run our searches)
-      orm.searchCharacter(req.params.characters, (data) => res.json(data));
+      Character.findAll({
+        where: {
+          name: req.params.characters
+        }
+      }).then((results) => res.json(results));
     }
 
     // Otherwise...
@@ -24,7 +28,7 @@ module.exports = (app) => {
       // Otherwise display the data for all of the characters.
 
       // (Note how we're using the ORM here to run our searches)
-      orm.allCharacters((data) => res.json(data));
+      Character.findAll({}).then((results) => res.json(results));
     }
   });
 
@@ -34,6 +38,11 @@ module.exports = (app) => {
     const character = req.body;
 
     // Then send it to the ORM to "save" into the DB.
-    orm.addCharacter(character, (data) => console.log(data));
+    Character.create({
+      name: req.body.name,
+      role: req.body.role,
+      age: req.body.age,
+      forcePoints: req.body.forcePoints
+    }).then((results) => res.json(results));
   });
 };
