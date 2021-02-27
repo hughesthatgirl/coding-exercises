@@ -1,4 +1,5 @@
 const express = require('express');
+const db = require('./models')
 
 // Sets up the Express App
 const app = express();
