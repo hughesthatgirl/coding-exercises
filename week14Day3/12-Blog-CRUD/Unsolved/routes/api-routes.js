@@ -4,25 +4,37 @@ const db = require('../models');
 module.exports = (app) => {
   // GET route for getting all of the posts
   app.get('/api/posts', (req, res) => {
-    // Add sequelize code to find all posts, and return them to the user with res.json
+    db.Post.findAll({}).then((dbPost) => res.json(dbPost));
   });
 
   // Get route for returning posts of a specific category
   app.get('/api/posts/category/:category', (req, res) => {
-    // Add sequelize code to find all posts where the category is equal to req.params.category,
-    // Return the result to the user with res.json
+    const category = req.params.category;
+    db.Post.findAll({
+      where: {
+        category: category
+      }
+    }).then((dbPost) => res.json(dbPost));
   });
 
   // Get route for retrieving a single post
   app.get('/api/posts/:id', (req, res) => {
-    // Add sequelize code to find a single post where the id is equal to req.params.id,
-    // return the result to the user with res.json
+    const id = req.params.id;
+    db.Post.findAll({
+      where: {
+        id: id
+      }
+    }).then((dbPost) => res.json(dbPost));
   });
 
   // POST route for saving a new post
   app.post('/api/posts', (req, res) => {
-    // Add sequelize code for creating a post using req.body,
-    // then return the result using res.json
+    db.Post.create({
+      title: req.body.title,
+      body: req.body.body,
+      category: req.body.category
+    }).then((dbPost) => res.json(dbPost));
+
   });
 
   // DELETE route for deleting posts
