@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 
   // Be sure to update with your own MySQL password!
   //In order for the connection to work, the DB must already exist
-  password: 'jhsqlpass1006!',
+  password: ' ',
   database: 'ice_creamDB',
 });
 

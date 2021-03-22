@@ -16,7 +16,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
   user: 'root',
-  password: 'jhsqlpass1006!',
+  password: ' ',
   database: 'wishes_db',
 });
 

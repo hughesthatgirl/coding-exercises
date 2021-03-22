@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Your password
-  password: 'jhsqlpass1006!',
+  password: ' ',
   database: 'top_songsDB',
 });
 
